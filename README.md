@@ -9,8 +9,7 @@ When exploring the world of artificial intelligence, you may stumble upon a gem 
 [Jennifer Martin](https://www.linkedin.com/in/jenny-martin-atx) - Developer  |   [Dana Hagan](https://www.linkedin.com/in/dev-with-dana) - Developer
 
 ### Links
-[Trello](https://trello.com/b/jHr5SFtx/unit3project)
-[Website]()
+[Trello](https://trello.com/b/jHr5SFtx/unit3project) | [Website]()
 
 ### Technology Used
 * Python
