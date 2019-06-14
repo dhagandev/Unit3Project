@@ -6,8 +6,7 @@ When exploring the world of artificial intelligence, you may stumble upon a gem 
 ### Team Members
 [Sara Ohlgren](https://www.linkedin.com/in/saraohlgren) - Designer  | 
 [Mary Crowther](https://www.linkedin.com/in/marycrow) - Designer  | 
-[Jennifer Martin](https://www.linkedin.com/in/jenny-martin-atx) - Developer  |   
-[Dana Hagan](https://www.linkedin.com/in/dev-with-dana) - Developer
+[Jennifer Martin](https://www.linkedin.com/in/jenny-martin-atx) - Developer  |   [Dana Hagan](https://www.linkedin.com/in/dev-with-dana) - Developer
 
 ### Links
 [Trello](https://trello.com/b/jHr5SFtx/unit3project)
