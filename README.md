@@ -18,6 +18,7 @@ When exploring the world of artificial intelligence, you may stumble upon a gem 
 * CSS
 * Postgresql 
 * Sketch
+* Figma
 * Heroku
 
 ### User Stories
