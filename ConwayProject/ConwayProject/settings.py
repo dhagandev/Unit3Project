@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import environ
+import subprocess
+import dj_database_url
 
 environ.Env()
 environ.Env.read_env()
@@ -87,6 +89,11 @@ DATABASES = {
     }
 }
 
+bashCommand = “heroku config:get DATABASE_URL -a conwaysurvival” #Use your app_name
+
+output = subprocess.check_output([‘bash’,’-c’, bashCommand]).decode(“utf-8”) # executing the bash command and converting byte to string
+
+DATABASES[‘default’] = dj_database_url.config(default=output,conn_max_age=600, ssl_require=True) #making connection to heroku DB without having to set DATABASE_URL env variable
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
