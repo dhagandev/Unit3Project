@@ -31,7 +31,10 @@ SECRET_KEY = 'kuc$sj(!tpa!uzb8beh_4y_ehkugr6@(9nqq)04bmhx)+-_k)2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://conwaysurvival.herokuapp.com/']
+ALLOWED_HOSTS = [
+    'localhost',
+    'https://conwaysurvival.herokuapp.com/',
+]
 
 
 # Application definition
