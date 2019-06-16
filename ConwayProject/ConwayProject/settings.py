@@ -27,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'kuc$sj(!tpa!uzb8beh_4y_ehkugr6@(9nqq)04bmhx)+-_k)2'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -89,15 +89,16 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ConwayProject',
         'PORT': os.environ['PSQL_PORT']
-
     }
 }
 
-bashCommand = “heroku config:get DATABASE_URL -a conwaysurvival” #Use your app_name
+bashCommand = “heroku config:get DATABASE_URL -a conwaysurvival”
 
-output = subprocess.check_output([‘bash’,’-c’, bashCommand]).decode(“utf-8”) # executing the bash command and converting byte to string
+# executing the bash command and converting byte to string
+output = subprocess.check_output([‘bash’,’-c’, bashCommand]).decode(“utf-8”) 
 
-DATABASES[‘default’] = dj_database_url.config(default=output,conn_max_age=600, ssl_require=True) #making connection to heroku DB without having to set DATABASE_URL env variable
+#making connection to heroku DB without having to set DATABASE_URL env variable
+DATABASES[‘default’] = dj_database_url.config(default=output,conn_max_age=600, ssl_require=True) 
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
