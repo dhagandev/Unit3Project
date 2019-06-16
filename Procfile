@@ -1,1 +1,1 @@
-web: gunicorn deployed:app
+web: gunicorn ConwayProject.wsgi —-log-file -
