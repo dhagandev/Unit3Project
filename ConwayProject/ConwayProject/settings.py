@@ -92,13 +92,13 @@ DATABASES = {
     }
 }
 
-bashCommand = “heroku config:get DATABASE_URL -a conwaysurvival”
+# bashCommand = “heroku config:get DATABASE_URL -a conwaysurvival”
 
-# executing the bash command and converting byte to string
-output = subprocess.check_output([‘bash’,’-c’, bashCommand]).decode(“utf-8”) 
+# # executing the bash command and converting byte to string
+# output = subprocess.check_output([‘bash’,’-c’, bashCommand]).decode(“utf-8”) 
 
-#making connection to heroku DB without having to set DATABASE_URL env variable
-DATABASES[‘default’] = dj_database_url.config(default=output,conn_max_age=600, ssl_require=True) 
+# #making connection to heroku DB without having to set DATABASE_URL env variable
+# DATABASES[‘default’] = dj_database_url.config(default=output,conn_max_age=600, ssl_require=True) 
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
